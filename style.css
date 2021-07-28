@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root{
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+
+    --vdark-cyan: hsl(179, 100%, 13%);
+    --t-white: hsla(0, 0%, 100%, 0.75);
+    --vlight-grey: hsl(0, 0%, 95%)
+}
+
+*{
+    padding: 0px;
+    margin: 0px; 
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+}
+
+
+body{
+    display: flex;
+    width: 300px;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    background-color: var(--vlight-grey);
+
+}
+
+.card{
+    width: 300px;
+    height:400px; 
+    padding-left: 30px;
+}
+
+.card--orange{
+    grid-area: Sedans;
+    background-color: var(--bright-orange);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.card--cyan{
+    grid-area: Suvs;
+    background-color: var(--dark-cyan);
+}
+
+.card--dark{
+    grid-area: Luxury;
+    background-color: var(--vdark-cyan);
+    border-radius: 0px 0px 10px 10px;
+}
+
+.card__image{
+    margin-top: 20px; 
+}
+
+.card__title{
+    font-size: 40px;
+    font-family: 'Big Shoulders Display', cursive;
+    color: var(--vlight-grey);
+    margin: 30px 0px;
+}
+
+.card__paragraph{
+    color: var(--t-white);
+    margin-bottom: 20px;
+    margin-right: 34px;
+    line-height: 25px;
+}
+
+.card__button{
+    padding: 15px 40px;
+    background-color: var(--vlight-grey);
+    border-radius: 30px;
+    border: 1px solid var(--vlight-grey);
+    cursor:pointer;
+
+}
+
+.card__button--orange{
+    color:var(--bright-orange)
+}
+
+.card__button--cyan{
+    color:var(--dark-cyan)
+}
+
+.card__button--dark{
+    color: var(--vdark-cyan);
+}
+
+.card__button--orange:hover{
+    color:var(--vlight-grey);
+    background-color: var(--bright-orange);
+}
+
+.card__button--cyan:hover{
+    color:var(--vlight-grey);
+    background-color: var(--dark-cyan)
+}
+
+.card__button--dark:hover{
+    color:var(--vlight-grey);
+    background-color: var(--vdark-cyan)
+}
+
+@media screen and (min-width:1000px) {
+
+    body{
+        flex-wrap: nowrap;
+        margin:0px;
+        width: auto;
+        height: 99vh; 
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card{
+        height: 500px; 
+    }
+
+    .card__image{
+        margin-top: 50px;
+    }
+
+    .card--orange{
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    .card--dark{
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    .card__paragraph{
+        margin-bottom:80px;
+        margin-right: 90px;
+    }
+
+
+    
+}
